@@ -1,0 +1,42 @@
+{
+  "name": "mqtt5-packets",
+  "version": "1.0.0",
+  "description": "Library for packet definitions of MQTT protocol v5.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build:ts": "tsc -p tsconfig.json",
+    "clean": "rimraf lib",
+    "build": "npm-run-all clean build:ts",
+    "test": "mocha --require ts-node/register src/**/*.spec.ts",
+    "test:coverage": "nyc npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratyaman/mqtt5-packets.git"
+  },
+  "keywords": [
+    "mqtt",
+    "mqtt5",
+    "packet",
+    "type",
+    "interface"
+  ],
+  "author": "Haci Murat Yaman",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/muratyaman/mqtt5-packets/issues"
+  },
+  "homepage": "https://github.com/muratyaman/mqtt5-packets#readme",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^15.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
